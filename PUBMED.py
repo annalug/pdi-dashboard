@@ -430,10 +430,11 @@ def Pubmed():
 
             def trend_chart(dict_group, group_name):
                df = pd.DataFrame(dict_group)
-
+               print(df.shape)
+               print("aqui")
                # Convert the index to a datetime object
                df.index = pd.to_datetime(df.index)
-
+               
                # Calculate the total publication counts for each year
                df['Total Counts'] = df.sum(axis=1)
 
