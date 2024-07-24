@@ -10,7 +10,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from PIL import Image
 from sklearn.preprocessing import MinMaxScaler
-from aux import *
+from aux2 import *
 
 img_path,base_path = img_base_pth()
 

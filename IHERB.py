@@ -6,7 +6,7 @@ import os
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 from datetime import timedelta
-from aux import *
+from aux2 import *
 
 storage_account_key = read_storage_key('storage_key.txt')
 container_name = "pdi-dashboard"

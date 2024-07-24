@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
-from aux import *
+from aux2 import *
 import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
