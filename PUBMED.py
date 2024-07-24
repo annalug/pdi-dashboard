@@ -461,6 +461,7 @@ def Pubmed():
                return fig
             
             with graph_3:
+               print(dict_temp)
                # Visualize the data for each group 
                st.plotly_chart(trend_chart(dict_temp, group_name))
 
