@@ -395,7 +395,7 @@ def Pubmed():
                 dict_temp = dict_herba
             else:
                 dict_temp = dict_prob
-            
+                print(dict_temp)
             with graph_1:
                # Visualize the data for each group 
                st.plotly_chart(visualize_year_count_plotly(dict_temp, group_name))
@@ -426,12 +426,11 @@ def Pubmed():
             
             with graph_2:
                # Visualize the data for each group 
-               st.plotly_chart(select_num_years(dict_temp, group_name, num_years_choice))
+               st.plotly_chart(select_num_years(, group_name, num_years_choice))
 
             def trend_chart(dict_group, group_name):
                df = pd.DataFrame(dict_group)
-               print(df.shape)
-               print("aqui")
+        
                # Convert the index to a datetime object
                df.index = pd.to_datetime(df.index)
                
@@ -463,7 +462,7 @@ def Pubmed():
             
             with graph_3:
                # Visualize the data for each group 
-               st.plotly_chart(trend_chart(dict_temp, group_name))
+               st.plotly_chart(trend_chart(, group_name))
 
             def test_create_df(dict_group, start_year, end_year):
                # create a transposed df from dict_group
@@ -542,6 +541,7 @@ def Pubmed():
             
             with graph_4:
                # Visualize the data for each group 
+               
                st.plotly_chart(test_trend_chart(group_name, dict_temp, str(2022 - trend_years_choice)))
 
 
