@@ -7,8 +7,10 @@ from PIL import Image
 from streamlit_option_menu import option_menu
 from aux2 import *
 import streamlit_authenticator as stauth
+import os
 
 
+storage_account_key = os.getenv("storage_key")
 container_name = "pdi-dashboard"
 storage_account_key = read_storage_key('storage_key.txt')
 # Defina suas credenciais e o nome do contêiner
