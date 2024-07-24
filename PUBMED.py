@@ -426,7 +426,7 @@ def Pubmed():
             
             with graph_2:
                # Visualize the data for each group 
-               st.plotly_chart(select_num_years(, group_name, num_years_choice))
+               st.plotly_chart(select_num_years(dict_temp, group_name, num_years_choice))
 
             def trend_chart(dict_group, group_name):
                df = pd.DataFrame(dict_group)
