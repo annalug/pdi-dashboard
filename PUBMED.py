@@ -462,7 +462,7 @@ def Pubmed():
             
             with graph_3:
                # Visualize the data for each group 
-               st.plotly_chart(trend_chart(, group_name))
+               st.plotly_chart(trend_chart(dict_temp, group_name))
 
             def test_create_df(dict_group, start_year, end_year):
                # create a transposed df from dict_group
