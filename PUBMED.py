@@ -173,8 +173,11 @@ def Pubmed():
       
          graph_one, graph_two = st.tabs(['Areas Terapeuticas', 'Partes da Planta'])
 
-         df_similarity = pd.read_excel(base_path+'\SORTED-score-similarity.xlsx')
-         df_similarity_plants = pd.read_excel(base_path+'\SORTED-score-similarity-plants.xlsx')
+         # df_similarity = pd.read_excel(base_path+'\SORTED-score-similarity.xlsx')
+         df_similarity = read_excel_from_blob(connection_string, container_name, "\Base_dados\SORTED-score-similarity.xlsx", cols=None)
+         
+         # df_similarity_plants = pd.read_excel(base_path+'\SORTED-score-similarity-plants.xlsx')
+         df_similarity_plants = read_excel_from_blob(connection_string, container_name, "\Base_dados\SORTED-score-similarity-plants.xlsx", cols=None)
 
          def plot_graph(group_df, group,number_words):
             df = group_df[group_df['Grupo'] == group].head(number_words)
